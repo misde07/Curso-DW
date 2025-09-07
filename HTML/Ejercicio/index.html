@@ -1,65 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Prueba</title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prueba</title>
+  </head>
+  <body>
 
-  <h1>Gabriel Nava</h1>
+    <h1>Gabriel Nava</h1>
 
-  <img src="" alt="">
+    <img 
+      src="./Imagenes/descarga.jpg" 
+      alt="Imagen no encontrada" 
+      title="descripcion que aparece cuando el mouse esta sobre la imagen"
+    >
 
-  <br>
+    <br>
 
-  <!-- Esto es IA -->
-  <img src="../Fundamentos/img/perrito_maincra.jpg" width="500px" alt="" onerror="this.style.display='none';document.getElementById('img-error').style.display='block';">
-  <div id="img-error" style="display:none;">imagen no encontrada</div>
+    <!-- Esto es IA -->
+    <img src="../Fundamentos/img/perrito_maincra.jpg" width="500px" alt="" onerror="this.style.display='none';document.getElementById('img-error').style.display='block';">
+    <div id="img-error" style="display:none;">imagen no encontrada</div>
 
-  <br>
+    <br>
 
-  <img src="./Imagenes/descarga.jpg" alt="">
+    <img src="./Imagenes/descarga.jpg" alt="">
 
-  <ol>
-    <li>Estudiar HTML</li>
-    <li>Practicar HTML</li>
-    <li>Repetir</li>
-  </ol>
+    <ol>
+      <li>Estudiar HTML</li>
+      <li>Practicar HTML</li>
+      <li>Repetir</li>
+    </ol>
 
-  <a href="https://youtube.com" target="_blank">
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus obcaecati ut animi officiis iusto culpa, neque a quasi. Doloremque vitae explicabo doloribus omnis facilis? Illo ducimus eum odit quae dolorum!</p>
-  </a>
+    <a href="https://youtube.com" target="_blank">
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus obcaecati ut animi officiis iusto culpa, neque a quasi. Doloremque vitae explicabo doloribus omnis facilis? Illo ducimus eum odit quae dolorum!</p>
+    </a>
 
-  <br><br><br><br><br>
+    <br><br><br><br><br>
 
-  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique corporis velit placeat adipisci nihil omnis, odio quos! Ab, fugit totam? Commodi ipsam veritatis libero tenetur ullam? Architecto dolores asperiores dolorem.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique corporis velit placeat adipisci nihil omnis, odio quos! Ab, fugit totam? Commodi ipsam veritatis libero tenetur ullam? Architecto dolores asperiores dolorem.</p>
 
-  <a href="https://google.com" target="_blank">
-    <button>Presioname</button>
-  </a>
+    <a href="https://google.com" target="_blank">
+      <button>Presioname</button>
+    </a>
 
-  <br><br>
+    <br><br>
 
-  <input type="text" name="usuario" id="usuario" placeholder="Usuario">
-  <input type="password" name="contraseña" id="password" placeholder="Contraseña">
+    <input type="text" name="usuario" id="usuario" placeholder="Usuario">
+    <input type="password" name="contraseña" id="password" placeholder="Contraseña">
 
-  <br><br>
+    <br><br>
 
-  <!-- Formulario -->
-  <input type="text" name="nombre" id="user" placeholder="Nombre de usuario">
-  <br>
-  <input type="password" name="contraseña" id="contraseña" placeholder="Escribe una contraseña">
-  <br>
-  <input type="email" name="correo" id="email" placeholder="Correo electrónico">
-  <br>
-  <div>
-    <label for="bth">Fecha de nacimiento: </label>
-    <input type="date" name="fecha" id="fecha">
-  </div>
-  <br>
-  <input type="text" name="direccion" id="direccion" placeholder="Dirección">
-  <br>
-  <input type="text" name="pais" id="pais" placeholder="País">
-</body>
+    <!-- Formulario -->
+    <input type="text" name="nombre" id="user" placeholder="Nombre de usuario">
+    <br>
+    <input type="password" name="contraseña" id="contraseña" placeholder="Escribe una contraseña">
+    <br>
+    <input type="email" name="correo" id="email" placeholder="Correo electrónico">
+    <input type="number" placeholder="telefono" name="telefono" id="telefono">
+    <br>
+    <div>
+      <label for="bth">Fecha de nacimiento: </label>
+      <input type="date" name="fecha" id="fecha">
+    </div>
+    <br>
+    <input type="time" name="hora" value="12:00" id="hora">
+    <input type="text" name="direccion" id="direccion" placeholder="Dirección">
+    <br>
+    <input type="text" name="pais" id="pais" placeholder="País">
+    <div>
+      <label for="presupuesto"></label>
+      <p id="salida"></p>
+      <input 
+      type="range" 
+      name="presupuesto" 
+      id="presupuesto" 
+      min="0" 
+      max="100" 
+      step="1" 
+      value="50"
+    >
+    </div>
+  </body>
+  <script>
+    const rango = document.getElementById('presupuesto');
+    const salida = document.getElementById('salida');
+    salida.textContent = rango.value;
+    rango.addEventListener('input', function() {
+      salida.textContent = this.value;
+    });
+  </script>
+  </html>
+  </body>
 </html>
